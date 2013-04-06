@@ -1,12 +1,80 @@
-<html>
-<head>
-	<title>Slides</title>
-</head>
-<body>
-	<ul>
-		<li>
-			<a href="new-relic">New Relic</a>
-		</li>
-	</ul>
-</body>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Jake A. Smith - Slides</title>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <link rel="stylesheet" href="vendor/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="vendor/reveal.js/css/theme/sky.css" id="theme">
+        <link rel="stylesheet" href="vendor/highlight.js/src/styles/github.css">
+        <link rel="stylesheet" href="vendor/reveal.js/css/print/pdf.css" type="text/css" media="print">
+
+        <!--[if lt IE 9]>
+        <script src="vendor/reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+       <div class="reveal">
+            <div class="slides">
+                <section data-markdown>
+                    <section data-markdown>
+                    ## Jake A. Smith
+
+                    <small>Software Engineer, VMR Products</small>
+                    </section>
+
+                    <section data-markdown>
+                        Herein lies a record of my talks, their dates and links to the slide decks. Thanks for stopping by!
+                    </section>
+                </section>
+
+                <section data-markdown>
+                    <section data-markdown>
+                    ### New Relic
+                    <small>April 10th, 2013</small>
+
+                    SoFloPHP (<a href="http://www.soflophp.org/events/104556862/">#</a>)
+
+                    <a href="new-relic/">jakeasmith.github.io/slides/new-relic</a>
+                    </section>
+                </section>
+
+                <section data-markdown>
+                    <section data-markdown>
+                    ### Git: The Basics
+                    <small>March 27th, 2013</small>
+
+                    Front-end Developer of Miami (<a href="http://www.meetup.com/Front-end-Developers-of-Miami/events/106297892/">#</a>)
+                    <a href="git-basic/">jakeasmith.github.io/slides/git-basic</a>
+                    </section>
+                </section>
+            </div>
+        </div>
+
+        <script src="vendor/reveal.js/lib/js/head.min.js"></script>
+        <script src="vendor/reveal.js/js/reveal.js"></script>
+        <script type="text/javascript">
+            Reveal.initialize({
+                // Full list of configuration options available here:
+                // https://github.com/hakimel/reveal.js#configuration
+                controls: true,
+                progress: true,
+                history: true,
+                rollingLinks: false,
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'vendor/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'vendor/reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'vendor/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'vendor/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'vendor/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }
+
+                ]
+            });
+        </script>
+    </body>
 </html>
