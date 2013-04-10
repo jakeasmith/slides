@@ -97,9 +97,9 @@
 ### Install on your server
 <a href="https://newrelic.com/docs/php/">newrelic.com/docs/php/</a>
 
-* RPM - REHL, CentOS
-* APT-GET - Ubuntu, Debian
-* Tar file with installer
+* RPM - RHEL, CentOS
+* apt-get - Ubuntu, Debian
+* Tarball with installer
                     </section>
 
                     <section>
@@ -109,6 +109,25 @@
 
     &lt;IfModule php5_module&gt;
         php_value newrelic.appname "Virtual Host 1"
+    &lt;/IfModule&gt;
+&lt;/VirtualHost&gt;</code></pre></section>
+
+                    <section>
+<pre><code class="apache">&lt;VirtualHost 192.168.42.43&gt;
+    ServerName www.myvhost1.com
+    DocumentRoot "/path/to/vhost1/"
+
+    &lt;IfModule php5_module&gt;
+        php_value newrelic.appname "US EN,Magento"
+    &lt;/IfModule&gt;
+&lt;/VirtualHost&gt;
+
+&lt;VirtualHost 192.168.42.43&gt;
+    ServerName www.myvhost1.com
+    DocumentRoot "/path/to/vhost1/"
+
+    &lt;IfModule php5_module&gt;
+        php_value newrelic.appname "US ES,Magento"
     &lt;/IfModule&gt;
 &lt;/VirtualHost&gt;</code></pre></section>
                 </section>
@@ -121,24 +140,31 @@
 ## servers
                     </section>
                     <section data-markdown>
-server list
+<img src="images/servers-list.png">
+list
                     </section>
                     <section data-markdown>
+<img src="images/server-overview.png">
 overview
                     </section>
                     <section data-markdown>
+<img src="images/server-processes.png">
 processes
                     </section>
                     <section data-markdown>
+<img src="images/server-network.png">
 network
                     </section>
                     <section data-markdown>
+<img src="images/server-disks.png">
 disks
                     </section>
                     <section data-markdown>
+<img src="images/server-alerts-single.png">
 setting alerts for single server
                     </section>
                     <section data-markdown>
+<img src="images/server-alerts-multiple.png">
 setting alerts for multiple servers
                     </section>
                 </section>
