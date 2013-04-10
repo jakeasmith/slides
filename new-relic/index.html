@@ -19,20 +19,29 @@
     <body>
        <div class="reveal">
             <div class="slides">
-                <section data-markdown>
-                    <section data-markdown>
-                    ## New Relic
-                    Jake A. Smith | @jakeasmith
 
-                    <small>Software Engineer, VMR Products</small>
+
+
+                <!-- Introduction -->
+                <section>
+                    <section data-markdown>
+## Jake A. Smith
+
+<small>Software Engineer, VMR Products | @jakeasmith</small>
                     </section>
-
                     <section data-markdown>
-                        jakeasmith.github.com/slides/
+## We're hiring
+* We're an e-commerce company
+* Very successful US Brand
+* Extending and optimizing Magento
+* Working with international franchises
                     </section>
                 </section>
 
-                <section data-markdown>
+
+
+                <!-- What are we talking about? -->
+                <section>
                     <section data-markdown>
 ## What is new relic?
 
@@ -53,8 +62,8 @@
                     <section data-markdown>
 ### Server Monitor
 
-* CPU Usage
-* Physical memory
+* CPU usage
+* Memory usage
 * Network activity
 * Disk I/O Utilization
 * Running Processes
@@ -74,15 +83,40 @@
 * Actual page load times
 * Render times
                     </section>
-
-                    <section data-markdown>
-### Apdex
-<small>A way of measuring your user's expectations</small>
-<img src="images/apdex.png" />
-                    </section>
                 </section>
 
-                <section data-markdown>
+
+
+                <!-- Section 0: Servers -->
+                <section>
+                    <section data-markdown>
+## Basic setup
+                    </section>
+
+                    <section data-markdown>
+### Install on your server
+<a href="https://newrelic.com/docs/php/">newrelic.com/docs/php/</a>
+
+* RPM - REHL, CentOS
+* APT-GET - Ubuntu, Debian
+* Tar file with installer
+                    </section>
+
+                    <section>
+<pre><code class="apache">&lt;VirtualHost 192.168.42.43&gt;
+    ServerName www.myvhost1.com
+    DocumentRoot "/path/to/vhost1/"
+
+    &lt;IfModule php5_module&gt;
+        php_value newrelic.appname "Virtual Host 1"
+    &lt;/IfModule&gt;
+&lt;/VirtualHost&gt;</code></pre></section>
+                </section>
+
+
+
+                <!-- Section 1: Servers -->
+                <section>
                     <section data-markdown>
 ## servers
                     </section>
@@ -111,8 +145,126 @@ setting alerts for multiple servers
 
 
 
+                <!-- Section 2: Application Monitoring -->
+                <section data-markdown>
+                    <section data-markdown>
+## application monitoring
+                    </section>
+                    <section data-markdown>
+application list
+                    </section>
+
+                    <section data-markdown>
+application overview -- app
+                    </section>
+
+                    <section data-markdown>
+application overview -- browser
+                    </section>
+
+                    <section data-markdown>
+### Apdex
+<small>A way of measuring your user's expectations</small>
+<img src="images/apdex.png" />
+                    </section>
+
+                    <section data-markdown>
+application overview -- browser
+                    </section>
+
+                    <section data-markdown>
+application overview -- below the fold A
+                    </section>
+
+                    <section data-markdown>
+application overview -- below the fold B
+                    </section>
+                    <section data-markdown>
+App Map
+                    </section>
+                    <section data-markdown>
+Database and Slow SQL -- overview / top 5
+                    <section data-markdown>
+Database and Slow SQL -- detail
+                    </section>
+                    <section data-markdown>
+External Services
+                    </section>
+                    <section data-markdown>
+Geography
+                    </section>
+                    <section data-markdown>
+Browser
+                    </section>
+                </section>
 
 
+                <!-- Section 3: Web Transactions -->
+                <section>
+                    <section data-markdown>
+## Web Transactions
+                    </section>
+                    <section data-markdown>
+WT - Overview
+                    </section>
+                    <section data-markdown>
+WT - Detail
+                    </section>
+                    <section data-markdown>
+WT - Trace summary
+                    </section>
+                    <section data-markdown>
+WT - Trace detail 1, 2, 3
+                    </section>
+                    <section data-markdown>
+WT - SQL Statements
+                    </section>
+                    <section data-markdown>
+WT - Detail
+                    </section>
+                    <section data-markdown>
+PHP API
+<a href="https://newrelic.com/docs/php/the-php-api">newrelic.com/docs/php/the-php-api</a>
+
+* newrelic_custom_metric (metric_name, value)
+* newrelic_add_custom_parameter (key, value)
+* newrelic_set_user_attributes (user, account, product)
+                    </section>
+                </section>
+
+
+
+                <!-- Section 4: Additional functionality -->
+                <section data-markdown>
+                    <section data-markdown>
+## Other things
+                    </section>
+                    <section data-markdown>
+deployments
+                    </section>
+                    <section data-markdown>
+notes
+                    </section>
+                    <section data-markdown>
+key transactions
+                    </section>
+                    <section data-markdown>
+custom dashboards
+                    </section>
+                    <section data-markdown>
+app speed index
+                    </section>
+                </section>
+
+
+
+                <!-- Section 5: The End -->
+                <section data-markdown>
+## Jake A. Smith
+Software Engineer, VMR Products
+
+<small>@jakeasmith | jakeasmith.github.io/slides/new-relic</small>
+                </section>
             </div>
         </div>
 
