@@ -87,7 +87,7 @@
 
 
 
-                <!-- Section 0: Servers -->
+                <!-- Section 2: Servers -->
                 <section>
                     <section data-markdown>
 ## Basic setup
@@ -129,12 +129,21 @@
     &lt;IfModule php5_module&gt;
         php_value newrelic.appname "US ES,Magento"
     &lt;/IfModule&gt;
+&lt;/VirtualHost&gt;
+
+&lt;VirtualHost 192.168.42.43&gt;
+    ServerName www.myvhost1.com
+    DocumentRoot "/path/to/vhost1/"
+
+    &lt;IfModule php5_module&gt;
+        php_value newrelic.appname "Magento Admin"
+    &lt;/IfModule&gt;
 &lt;/VirtualHost&gt;</code></pre></section>
                 </section>
 
 
 
-                <!-- Section 1: Servers -->
+                <!-- Section 3: Servers -->
                 <section>
                     <section data-markdown>
 ## servers
@@ -171,57 +180,90 @@ setting alerts for multiple servers
 
 
 
-                <!-- Section 2: Application Monitoring -->
+                <!-- Section 4: Application Monitoring -->
                 <section data-markdown>
                     <section data-markdown>
 ## application monitoring
                     </section>
                     <section data-markdown>
+<img src="images/app-list.png">
 application list
                     </section>
 
                     <section data-markdown>
-application overview -- app
+<img src="images/app-overview-timespan.png">
+application overview - time span
                     </section>
 
                     <section data-markdown>
-application overview -- browser
+<img src="images/app-overview-server.png">
+application overview - app server
+                    </section>
+
+                    <section data-markdown>
+<img src="images/app-overview-wt.png">
+application overview - web transactions
+                    </section>
+
+                    <section data-markdown>
+<img src="images/app-overview-browser.png">
+application overview - browser
                     </section>
 
                     <section data-markdown>
 ### Apdex
-<small>A way of measuring your user's expectations</small>
+<small>An equation for measuring your user's satisfaction</small>
 <img src="images/apdex.png" />
                     </section>
 
                     <section data-markdown>
-application overview -- browser
+<img src="images/app-overview-server.png">
+application overview - app server
                     </section>
 
                     <section data-markdown>
-application overview -- below the fold A
+<img src="images/app-overview-below-a.png">
+application overview - below the fold
                     </section>
 
                     <section data-markdown>
-application overview -- below the fold B
+<img src="images/app-overview-below-b.png">
                     </section>
                     <section data-markdown>
+<img src="images/app-map-a.png">
 App Map
                     </section>
                     <section data-markdown>
-Database and Slow SQL -- overview / top 5
+<img src="images/app-map-b.png">
+App Map
                     </section>
                     <section data-markdown>
-Database and Slow SQL -- detail
-                    </section>
-                    <section data-markdown>
+<img src="images/app-external.png">
 External Services
                     </section>
                     <section data-markdown>
+<img src="images/app-db-overview.png">
+Database and Slow SQL - overview / top 5
+                    </section>
+                    <section data-markdown>
+<img src="images/app-db-detail.png">
+Database and Slow SQL - detail
+                    </section>
+                    <section data-markdown>
+<img src="images/app-geography.png">
 Geography
                     </section>
                     <section data-markdown>
-Browser
+<img src="images/app-browser.png">
+Browser - Overview
+                    </section>
+                    <section data-markdown>
+<img src="images/app-browser-detail.png">
+Browser - Detail
+                    </section>
+                    <section data-markdown>
+<img src="images/app-browser-detail-bigger.png">
+Browser - Detail
                     </section>
                 </section>
 
@@ -232,30 +274,48 @@ Browser
 ## Web Transactions
                     </section>
                     <section data-markdown>
+<img src="images/app-wt-overview.png">
 WT - Overview
                     </section>
                     <section data-markdown>
+<img src="images/app-wt-overview-grid.png">
+WT - Overview Grid
+                    </section>
+                    <section data-markdown>
+<img src="images/app-wt-detail.png">
 WT - Detail
                     </section>
                     <section data-markdown>
+<img src="images/app-wt-trace-summary.png">
 WT - Trace summary
                     </section>
                     <section data-markdown>
-WT - Trace detail 1, 2, 3
+<img src="images/app-wt-trace-summary-bigger.png">
+WT - Trace summary
                     </section>
                     <section data-markdown>
-WT - SQL Statements
+<img src="images/app-wt-trace- details-a.png">
                     </section>
                     <section data-markdown>
-WT - Detail
+<img src="images/app-wt-trace- details-b.png">
                     </section>
                     <section data-markdown>
-PHP API
-<a href="https://newrelic.com/docs/php/the-php-api">newrelic.com/docs/php/the-php-api</a>
+<img src="images/app-wt-trace- details-c.png">
+                    </section>
+                    <section data-markdown>
+<img src="images/app-wt-trace- sql.png">
+                    </section>
+                    <section data-markdown>
+<img src="images/app-wt-trace-summary-bigger.png">
+WT - Trace summary
+                    </section>
+                    <section data-markdown>
+## PHP API
+<small><a href="https://newrelic.com/docs/php/the-php-api">newrelic.com/docs/php/the-php-api</a></small>
 
-* newrelic_custom_metric (metric_name, value)
-* newrelic_add_custom_parameter (key, value)
-* newrelic_set_user_attributes (user, account, product)
+* newrelic\_custom\_metric (metric\_name, value)
+* newrelic\_add\_custom\_parameter (key, value)
+* newrelic\_set\_user\_attributes (user, account, product)
                     </section>
                 </section>
 
@@ -267,19 +327,43 @@ PHP API
 ## Other things
                     </section>
                     <section data-markdown>
+<img src="images/deployment-overview.png">
 deployments
                     </section>
                     <section data-markdown>
+<img src="images/deployment-report.png">
+deployments
+                    </section>
+                    <section data-markdown>
+<img src="images/notes-a.png">
 notes
                     </section>
                     <section data-markdown>
+<img src="images/notes-b.png">
+notes
+                    </section>
+                    <section data-markdown>
+<img src="images/notes-c.png">
+notes
+                    </section>
+                    <section data-markdown>
+<img src="images/key-transactions-a.png">
 key transactions
                     </section>
                     <section data-markdown>
+<img src="images/key-transactions-b.png">
+key transactions
+                    </section>
+                    <section data-markdown>
+<img src="images/key-transactions-c.png">
+                    </section>
+                    <section data-markdown>
+<img src="images/custom-dashboards-a.png">
 custom dashboards
                     </section>
                     <section data-markdown>
-app speed index
+<img src="images/custom-dashboards-b.png">
+custom dashboards
                     </section>
                 </section>
 
